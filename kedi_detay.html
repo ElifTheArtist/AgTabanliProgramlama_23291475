@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedi Detay</title>
+    <link rel="stylesheet" href="kedi_turleri.css">
+</head>
+<body class="other-pages">
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">KEDY®</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Ana sayfa</a></li>
+                <li><a href="kediler_hakkinda.html">Kediler hakkında</a></li>
+                <li><a href="kedi_turleri.html">Kedi türleri</a></li>
+                <li><a href="kaynakca.html">Kaynakça</a></li>
+            </ul>
+        </div>
+        
+        <!-- Kedi Detay -->
+        <div class="center">
+            <img id="catImage" src="" alt="" class="cat-image">
+            <h1 id="catName"></h1>
+            <p id="catInfo"></p>
+        </div>
+    </div>
+
+    <script>
+        // URL'den parametreleri almak için bir fonksiyon
+        function getQueryParams() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            return {
+                name: urlParams.get('name'),
+                info: urlParams.get('info'),
+                image: urlParams.get('image')
+            };
+        }
+
+        // Parametreleri al ve sayfa içeriğini doldur
+        const params = getQueryParams();
+        if (params.name && params.info && params.image) {
+            document.getElementById('catName').textContent = params.name;
+            document.getElementById('catInfo').textContent = params.info;
+            document.getElementById('catImage').src = params.image;
+            document.getElementById('catImage').alt = params.name;
+        } 
+        else {
+            document.body.innerHTML = "<h1 style='text-align:center;color:red;'>Kedi bilgileri bulunamadı! Lütfen tekrar deneyin.</h1>";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e0f7fa; 
+}
+
+.container {
+    padding-top: 60px; 
+}
+
+.container .navbar {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to right, white, rgb(191, 222, 233));
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 17px;
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Arial;
+    color: palevioletred;
+}
+
+.navbar ul {
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 12px;
+    line-height: 55px;
+}
+
+.navbar ul li a {
+    color: gray;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 6px 13px;
+    font-family: Arial;
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover {
+    background: palevioletred;
+    color: white;
+    border-radius: 5px;
+}
+
+.center {
+    text-align: center;
+    margin-top: 100px;
+    font-family: Arial;
+}
+
+.center h1 {
+    color: gray;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.center p {
+    color: #666;
+    font-size: 25px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.article-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, sans-serif;
+}
+
+.article-box h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.article-box p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.read-more-btn {
+    background-color: palevioletred;
+    color: white; 
+    padding: 10px 20px; 
+    text-decoration: none;
+    border-radius: 5px; 
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; 
+}
+
+.read-more-btn:hover {
+    background-color: #e6007e; 
+}
+
+.search-bar {
+    width: 50%;
+    max-width: 500px;
+    margin: 20px auto 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: palevioletred;
+}
+
+
+@media screen and (max-width: 768px) {
+    .article-box {
+        padding: 15px;
+    }
+
+    .article-box h2 {
+        font-size: 24px;
+    }
+
+    .article-box p {
+        font-size: 16px;
+    }
+
+    .search-bar {
+        width: 70%;
+    }
+}

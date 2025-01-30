@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol</title>
+    <link rel="stylesheet" href="kayit.css">
+</head>
+<body class="other-pages">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">KEDY®</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Ana sayfa</a></li>
+                <li><a href="kediler_hakkinda.html">Kediler hakkında</a></li>
+                <li><a href="kedi_turleri.html">Kedi türleri</a></li>
+                <li><a href="kaynakca.html">Kaynakça</a></li>
+            </ul>
+        </div>
+
+        <div class="form-container">
+            <h1>Kayıt Ol</h1>
+            <form id="signup-form">
+                <label for="username">Kullanıcı Adı</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">E-posta</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Şifre</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Şifre Tekrarı</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <button type="submit" class="submit-btn">Kayıt Ol</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+    
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm-password").value;
+    
+        if (password === "" || confirmPassword === "") {
+            alert("Şifre alanları boş bırakılamaz!");
+        } else if (password !== confirmPassword) {
+            alert("Şifreler eşleşmiyor!");
+        } else {
+            alert("Kayıt başarılı!");
+            document.getElementById("signup-form").reset();
+        
+
+        
+    
+            document.getElementById("signup-form").reset();
+        
+            // Ya da forma girilen tüm bilgileri tek tek temizleyerek de uzun yoldan resetleyebiliriz:
+            // document.getElementById("username").value = "";
+            // document.getElementById("email").value = "";
+            // document.getElementById("password").value = "";
+            // document.getElementById("confirm-password").value = "";
+        }
+});
+
+    </script>
+</body>
+</html>

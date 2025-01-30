@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kediler 101</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="anasayfa"> 
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">KEDY®</a>
+            </div>
+            <ul>
+                <li><a href="index.html" class="active">Ana sayfa</a></li>
+                <li><a href="kediler_hakkinda.html">Kediler hakkında</a></li>
+                <li><a href="kedi_turleri.html">Kedi türleri</a></li>
+                <li><a href="kaynakca.html">Kaynakça</a></li>
+            </ul>
+        </div>
+      
+        <div class="center">
+            <h1>Kediler 101</h1>
+            <div class="buttons">
+                <button><a href="iletisim.html">İletişim</a></button>
+                <button><a href="kayit.html">Kayıt ol</a></button>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentPage = window.location.pathname.split('/').pop(); 
+            var navLinks = document.querySelectorAll('.navbar ul li a'); 
+
+            navLinks.forEach(function(link) {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active'); 
+                }
+            });
+        });
+    </script>
+</body>
+
+<div class="social-media">
+    <a href="https://www.facebook.com" target="_blank" class="social-icon">
+        <img src="resim/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://twitter.com" target="_blank" class="social-icon">
+        <img src="resim/x.png" alt="Twitter">
+    </a>
+    <a href="https://www.instagram.com" target="_blank" class="social-icon">
+        <img src="resim/instagram.png" alt="Instagram">
+    </a>
+   
+</div>
+
+</html>

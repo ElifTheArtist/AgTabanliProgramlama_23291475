@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.anasayfa {
+    background: url(resim/kedyler.jpeg);
+    background-size: cover;
+    background-position: 20% top; 
+}
+
+body:not(.anasayfa) {
+    background-color: #e0f7fa;
+}
+
+.container {
+    height: 100vh;
+    padding-top: 60px;
+}
+
+.container .navbar {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to right, white, rgb(191, 222, 233));
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+}
+
+.navbar .logo {
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 17px;
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Arial;
+    color: palevioletred;
+}
+
+.navbar ul {
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 12px;
+    line-height: 55px;
+}
+
+.navbar ul li a {
+    color: gray;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 6px 13px;
+    font-family: Arial;
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover {
+    background: palevioletred;
+    color: white;
+    border-radius: 5px;
+}
+
+.container .center{
+    position: absolute;
+    top: 50%; 
+    left: 53%;
+    transform: translate(-50%, -50%); 
+    font-family: Arial;
+    user-select: none;
+}
+
+.center h1 {
+    color: gray;
+    font-size: 50px;
+    font-weight: bold;
+    width: 900px;
+    text-align: center;
+}
+
+.center .buttons {
+    margin: 35px 290px;
+}
+
+.buttons button {
+    height: 50px;
+    width: 150px;
+    font-size: 21px;
+    color: palevioletred;
+    background: rgb(211, 243, 255);
+    border: solid 2px palevioletred;
+    cursor: pointer;
+    outline: none;
+    border-radius: 25px;
+}
+
+.buttons button:hover {
+    background: white;
+}
+
+a{
+    text-decoration: none;
+    color: palevioletred;
+}
+
+
+body {
+    margin-bottom: 80px;
+}
+
+
+.social-media {
+    position: fixed;
+    bottom: 10px; 
+    left: 53%;
+    transform: translateX(-50%); 
+    display: flex;
+    gap: 30px; 
+    z-index: 999;
+}
+
+.social-icon {
+    background-color: palevioletred; 
+    border-radius: 50%;
+    padding: 15px; 
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+    display: inline-block;
+}
+
+.social-icon img {
+    width: 60px; 
+    height: 60px;
+    transition: transform 0.3s;
+}
+
+
+.social-icon:hover {
+    transform: scale(1.1); 
+    background-color: #ff80b5; 
+}

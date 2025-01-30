@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kediler Hakkında</title>
+    <link rel="stylesheet" href="kediler_hakkinda.css">
+</head>
+
+<body class="other-pages">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">KEDY®</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Ana sayfa</a></li>
+                <li><a href="kediler_hakkinda.html" class="active">Kediler hakkında</a></li>
+                <li><a href="kedi_turleri.html">Kedi türleri</a></li>
+                <li><a href="kaynakca.html">Kaynakça</a></li>
+            </ul>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Makale ara..." onkeyup="searchArticles()">
+        </div>
+        
+
+        <div class="center">
+            <h1>Kediler Hakkında</h1>
+            <p>Kedilerle ilgili çeşitli makalelere buradan ulaşabilirsiniz. Arama kısmından makale ismi ya da yazar ismine göre arama yapabilirsiniz.</p>
+        </div>
+
+        <div class="article-box" data-title="Kedilerin zihinsel sağlığı için en iyi beslenme" data-author="Mikel Delgado, Leticia M. S. Dantas">
+            <h2>Kedilerin zihinsel sağlığı için en iyi beslenme</h2>
+            <p>Mikel Delgado, Leticia M. S. Dantas</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7415653/" class="read-more-btn" target="_blank">Oku</a>
+        </div>
+
+        <div class="article-box" data-title="Kedi sahiplerinin kedilerin beden dilini anlama seviyesi" data-author="Ömer Erten, Fikret Esen, İbrahim Şeker, Burak Fatih Yüksel">
+            <h2>Kedi sahiplerinin kedilerin beden dilini anlama seviyesi</h2>
+            <p>Ömer Erten, Fikret Esen, İbrahim Şeker, Burak Fatih Yüksel</p>
+            <a href="https://dergipark.org.tr/en/download/article-file/2327218" class="read-more-btn" target="_blank">Oku</a>
+        </div>
+
+        <div class="article-box" data-title="Kedilerde alt solunum yolu enfeksiyonları" data-author="Susan F. Foster, Patricia Martin">
+            <h2>Kedilerde alt solunum yolu enfeksiyonları</h2>
+            <p>Susan F. Foster, Patricia Martin</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7129729/" class="read-more-btn" target="_blank">Oku</a>
+        </div>
+
+        <div class="article-box" data-title="Kedilerin yaşları ve yaşam evreleri" data-author="Anonim">
+            <h2>Kedilerin yaşları ve yaşam evreleri</h2>
+            <p>Anonim</p>
+            <a href="https://www.boehringer-ingelheim.com/tr/kedilerin-yaslari-ve-yasam-evreleri" class="read-more-btn" target="_blank">Oku</a>
+        </div>
+
+        <div class="article-box" data-title="Değişik milletler tarihlerinde kedi" data-author="Samuel Aysoy">
+            <h2>Değişik milletler tarihlerinde kedi</h2>
+            <p>Samuel Aysoy</p>
+            <a href="https://dspace.ankara.edu.tr/server/api/core/bitstreams/54ad0f03-a201-4982-9b1c-4cd88443a7be/content" class="read-more-btn" target="_blank">Oku</a>
+        </div>
+
+        <div class="article-box" data-title="Kedi ve Köpeklerde Travma Hastalarında Acil Yaklaşım" data-author="Anonim">
+            <h2>Kedi ve Köpeklerde Travma Hastalarında Acil Yaklaşım</h2>
+            <p>Anonim</p>
+            <a href="https://www.turkiyeklinikleri.com/article/tr-kedi-ve-kopeklerde-travma-hastalarinda-acil-yaklasim-73391.html" class="read-more-btn" target="_blank">Oku</a>
+        </div>
+
+        <div class="article-box" data-title="Orhan Pamuk romanlarında kediler" data-author="Murat Yusuf Önem">
+            <h2>Orhan Pamuk romanlarında kediler</h2>
+            <p>Murat Yusuf Önem</p>
+            <a href="https://books.google.com.tr/books?hl=tr&lr=lang_tr&id=s2TTEAAAQBAJ&oi=fnd&pg=PP1&dq=kedi+edebiyat&ots=QV65PcB61y&sig=dRE4r0qYCMuC-AYWUpu_xGq8TH0&redir_esc=y#v=onepage&q=kedi%20edebiyat&f=false" class="read-more-btn" target="_blank">Oku</a>
+        </div>
+    </div>
+    
+    <script>
+        function searchArticles() {
+            var input = document.getElementById('searchInput');
+            var filter = input.value.toLowerCase();
+            var articles = document.getElementsByClassName('article-box');
+
+            for (var i = 0; i < articles.length; i++) {
+                var title = articles[i].getAttribute('data-title').toLowerCase();
+                var author = articles[i].getAttribute('data-author').toLowerCase();
+
+                
+                if (title.includes(filter) || author.includes(filter)) {
+                    articles[i].style.display = "";
+                } else {
+                    articles[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>
